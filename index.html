@@ -1,0 +1,183 @@
+ñ<<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basílicas de España: Madrid, Barcelona, Sevilla, Cataluña y Galicia</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fdf6f0;
+      color: #333;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .tarjeta {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 350px;
+      text-align: center;
+    }
+
+    .imagen-monumento {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 4px solid #2575fc;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #2575fc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #1a4fbf;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: linear-gradient(to right, #f8cdda, #fbd786);
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      color: #4b2e2e;
+      border-top: 2px solid #d88;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Basílicas Icónicas de España</h1>
+    <p>Un recorrido por la fe y la arquitectura de varias regiones españolas.</p>
+  </header>
+
+  <main class="contenedor">
+    <!-- Barcelona -->
+    <section class="tarjeta">
+      <h2>Barcelona: La Sagrada Familia</h2>
+      <img id="img-barcelona" src="CSS/img/sagrada familia.avif" class="imagen-monumento" alt="Sagrada Familia" />
+      <button onclick="cambiarImagen('barcelona')">Cambiar Imagen</button>
+      <div class="informacion-ciudad">
+        <h3>Curiosidades de Barcelona</h3>
+        <p><strong>Ciudad:</strong> Conocida por el modernismo catalán, sus playas y la Rambla. Fue sede de los Juegos Olímpicos de 1992.</p>
+        <p><strong>Arquitecto:</strong> Gaudí. La construcción de la basílica lleva más de un siglo.</p>
+      </div>
+    </section>
+
+    <!-- Madrid -->
+    <section class="tarjeta">
+      <h2>Madrid: Catedral de la Almudena</h2>
+      <img id="img-madrid" src="CSS/img/Almudena-Cathedral-of-Madrid.jpg" class="imagen-monumento" alt="Catedral de la Almudena" />
+      <button onclick="cambiarImagen('madrid')">Cambiar Imagen</button>
+      <div class="informacion-ciudad">
+        <h3>Curiosidades de Madrid</h3>
+        <p><strong>Ciudad:</strong> La capital de España, famosa por el Museo del Prado, la Puerta del Sol y ser una metrópolis vibrante.</p>
+        <p><strong>Dato Curioso:</strong> La Almudena fue consagrada por el Papa Juan Pablo II en 1993 y tiene una mezcla única de estilos arquitectónicos.</p>
+      </div>
+    </section>
+
+    <!-- Sevilla -->
+    <section class="tarjeta">
+      <h2>Sevilla: Basílica de la Macarena</h2>
+      <img id="img-sevilla" src="CSS/img/SEVILLLA.webp" class="imagen-monumento" alt="Basílica de Sevilla" />
+      <button onclick="cambiarImagen('sevilla')">Cambiar Imagen</button>
+      <div class="informacion-ciudad">
+        <h3>Curiosidades de Sevilla</h3>
+        <p><strong>Ciudad:</strong> Famosa por su arte flamenco, la Giralda y la Semana Santa.</p>
+        <p><strong>Dato Curioso:</strong> La Macarena es una de las vírgenes más veneradas del sur de España.</p>
+      </div>
+    </section>
+
+    <!-- Cataluña -->
+    <section class="tarjeta">
+      <h2>Cataluña: Basílica de Montserrat</h2>
+      <img id="img-cataluna" src="CSS/img/CATALUNA.jpg" class="imagen-monumento" alt="Basílica de Cataluña" />
+      <button onclick="cambiarImagen('cataluna')">Cambiar Imagen</button>
+      <div class="informacion-ciudad">
+        <h3>Curiosidades de Cataluña</h3>
+        <p><strong>Ciudad:</strong> Región rica en cultura, lengua propia y arquitectura modernista.</p>
+        <p><strong>Dato Curioso:</strong> Montserrat es un santuario espiritual y natural en las montañas catalanas.</p>
+      </div>
+    </section>
+
+    <!-- Galicia -->
+    <section class="tarjeta">
+      <h2>Galicia: Catedral de Santiago de Compostela</h2>
+      <img id="img-galicia" src="CSS/img/GALICIA.webp" class="imagen-monumento" alt="Basílica de Galicia" />
+      <button onclick="cambiarImagen('galicia')">Cambiar Imagen</button>
+      <div class="informacion-ciudad">
+        <h3>Curiosidades de Galicia</h3>
+        <p><strong>Ciudad:</strong> Tierra de leyendas, mariscos y peregrinaciones.</p>
+        <p><strong>Dato Curioso:</strong> La catedral es el destino final del Camino de Santiago, una ruta milenaria.</p>
+      </div>
+    </section>
+  </main>
+
+  <audio id="sonido-cambio" src="CSS/audio/click.mp3" preload="auto"></audio>
+
+  <script>
+    const imagenes = {
+      barcelona: ["CSS/img/sagrada familia.avif", "CSS/img/barcelona.webp"],
+      madrid: ["CSS/img/Almudena-Cathedral-of-Madrid.jpg", "CSS/img/madrid.webp"],
+      sevilla: ["CSS/img/SEVILLLA.webp", "CSS/img/SEVILLAAAA.jpg"],
+      cataluna: ["CSS/img/CATALUNA.jpg", "CSS/img/CATALUNA 2.webp"],
+      galicia: ["CSS/img/GALICIA.webp", "CSS/img/GALICIAAA.webp"]
+    };
+
+    const indices = {
+      barcelona: 0,
+      madrid: 0,
+      sevilla: 0,
+      cataluna: 0,
+      galicia: 0
+    };
+
+    function cambiarImagen(ciudad) {
+      const sonido = document.getElementById("sonido-cambio");
+      sonido.play();
+
+      indices[ciudad] = (indices[ciudad] + 1) % imagenes[ciudad].length;
+      const img = document.getElementById("img-" + ciudad);
+      img.style.opacity = 0;
+      setTimeout(() => {
+        img.src = imagenes[ciudad][indices[ciudad]];
+        img.style.animation = "fadeIn 1s forwards";
+      }, 300);
+    }
+  </script>
+</body>
+</html>

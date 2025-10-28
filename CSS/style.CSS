@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basílicas de España: Madrid y Barcelona</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Basílicas Icónicas de España</h1>
+        <p>Un recorrido por la fe y la arquitectura de Madrid y Barcelona.</p>
+    </header>
+
+    <main class="contenedor">
+        <section class="tarjeta barcelona">
+            <h2>Barcelona: La Sagrada Familia</h2>
+            <div class="imagen-placeholder">
+                <img src="CSS/img/sagrada familia.avif" alt="Sagrada Familia" class="imagen-monumento">
+            </div>
+            
+            <div class="informacion-ciudad">
+                <h3>Curiosidades de Barcelona</h3>
+<div class="imagen-placeholder">
+                <img src="CSS/img/barcelona.webp" alt="Catedral de la Almudena" class="imagen-monumento">
+            </div>
+
+                <p><strong>Ciudad:</strong> Conocida por el modernismo catalán, sus playas y la Rambla. Fue sede de los Juegos Olímpicos de 1992.</p>
+                <p><strong>Arquitecto:</strong> Gaudí. La construcción de la basílica lleva más de un siglo.</p>
+            </div>
+        </section>
+
+        <section class="tarjeta madrid">
+            <h2>Madrid: Catedral de la Almudena</h2>
+            <div class="imagen-placeholder">
+                <img src="CSS/img/Almudena-Cathedral-of-Madrid.jpg" alt="Catedral de la Almudena" class="imagen-monumento">
+            </div>
+            
+            <div class="informacion-ciudad">
+                <h3>Curiosidades de Madrid
+<div class="imagen-placeholder">
+                <img src="CSS/img/madrid.webp" alt="Catedral de la Almudena" class="imagen-monumento">
+            </div>
+
+                
+                <p><strong>Ciudad:</strong> La capital de España, famosa por el Museo del Prado, la Puerta del Sol y ser una metrópolis vibrante.</p>
+                <p><strong>Dato Curioso:</strong> La Almudena fue consagrada por el Papa Juan Pablo II en 1993 y tiene una mezcla única de estilos arquitectónicos (neoclásico, neogótico y neorrománico).</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Recorrido Arquitectónico Español</p>
+    </footer>
+</body>
+</html>
+
+
